@@ -2,8 +2,9 @@
 
 from pathlib import Path
 
-from app.evaluate import normalize, same_number, score
+from app.evaluate import same_number, score
 from app.schemas import Bill
+from app.text import normalize
 
 SAMPLES = Path(__file__).parent.parent / "samples"
 

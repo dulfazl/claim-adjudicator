@@ -1,0 +1,6 @@
+{
+  "member": { "name": "Rahul Verma", "used_this_year": 0 },
+  "submitted_on": "2026-09-10",
+  "documents": ["004_prescription", "003_lab_bill"],
+  "expected": { "status": "MANUAL_REVIEW", "approved": "0.00" }
+}
