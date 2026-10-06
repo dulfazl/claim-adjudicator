@@ -3,12 +3,12 @@
     python -m app.evaluate
 """
 
-import re
 from dataclasses import dataclass, field
 from pathlib import Path
 
 from app.extract import MODEL, extract_bill
 from app.schemas import Bill
+from app.text import normalize
 
 SAMPLES = Path(__file__).parent.parent / "samples"
 IMAGE_TYPES = {".png": "image/png", ".jpg": "image/jpeg"}
@@ -16,7 +16,6 @@ IMAGE_TYPES = {".png": "image/png", ".jpg": "image/jpeg"}
 EXACT_FIELDS = ["document_type", "bill_date"]
 TEXT_FIELDS = ["provider_name", "patient_name", "doctor_name", "bill_number", "diagnosis"]
 NUMBER_FIELDS = ["discount", "total_amount"]
-TITLES = {"mr", "mrs", "ms", "dr", "smt", "shri"}
 
 
 @dataclass
@@ -26,14 +25,6 @@ class Score:
     items_right: int = 0
     items_total: int = 0
     mistakes: list[str] = field(default_factory=list)
-
-
-def normalize(text: str | None) -> str | None:
-    """'Ms. ANANYA  Rao' and 'Ananya Rao' are the same answer, so compare them without case, punctuation or titles."""
-    if text is None:
-        return None
-    words = re.sub(r"[^a-z0-9]+", " ", text.lower()).split()
-    return " ".join(word for word in words if word not in TITLES)
 
 
 def same_number(a: float | None, b: float | None) -> bool:
