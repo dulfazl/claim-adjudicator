@@ -1,0 +1,18 @@
+{
+  "document_type": "bill",
+  "provider_name": "Sunrise Family Clinic",
+  "patient_name": "Ananya Rao",
+  "doctor_name": "Dr. R. Menon",
+  "bill_number": "SFC/2026/04127",
+  "bill_date": "2026-09-14",
+  "diagnosis": "Acute viral fever",
+  "line_items": [
+    { "description": "Consultation Fee", "category": "consultation", "quantity": 1, "amount": 700.0 },
+    { "description": "Complete Blood Count (CBC)", "category": "diagnostic", "quantity": 1, "amount": 350.0 },
+    { "description": "Dengue NS1 Antigen Test", "category": "diagnostic", "quantity": 1, "amount": 600.0 },
+    { "description": "Tab. Paracetamol 650 mg (strip of 10)", "category": "pharmacy", "quantity": 2, "amount": 31.0 },
+    { "description": "ORS Sachet 21 g", "category": "pharmacy", "quantity": 4, "amount": 88.0 }
+  ],
+  "discount": null,
+  "total_amount": 1769.0
+}
