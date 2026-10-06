@@ -1,0 +1,17 @@
+{
+  "document_type": "bill",
+  "provider_name": "BrightSmile Dental Care",
+  "patient_name": "Fatima Sheikh",
+  "doctor_name": "Dr. Arjun Nair",
+  "bill_number": "BSD-2026-1193",
+  "bill_date": "2026-09-21",
+  "diagnosis": "Irreversible pulpitis (tooth 36)",
+  "line_items": [
+    { "description": "Consultation & Oral Examination", "category": "consultation", "quantity": null, "amount": 500.0 },
+    { "description": "IOPA X-Ray", "category": "diagnostic", "quantity": null, "amount": 300.0 },
+    { "description": "Root Canal Treatment (single sitting)", "category": "procedure", "quantity": null, "amount": 6500.0 },
+    { "description": "Teeth Whitening (cosmetic)", "category": "cosmetic", "quantity": null, "amount": 4000.0 }
+  ],
+  "discount": null,
+  "total_amount": 11300.0
+}

@@ -1,0 +1,18 @@
+{
+  "document_type": "bill",
+  "provider_name": "WellCare Pharmacy",
+  "patient_name": "Ananya Rao",
+  "doctor_name": "R Menon",
+  "bill_number": "WCP-88213",
+  "bill_date": "2026-09-15",
+  "diagnosis": null,
+  "line_items": [
+    { "description": "DOLO 650 TAB 15S", "category": "pharmacy", "quantity": 1, "amount": 33.6 },
+    { "description": "AZITHRAL 500 TAB 5S", "category": "pharmacy", "quantity": 1, "amount": 132.4 },
+    { "description": "ASCORIL LS SYP 100ML", "category": "pharmacy", "quantity": 1, "amount": 118.0 },
+    { "description": "ELECTRAL PWD 21.8G", "category": "pharmacy", "quantity": 3, "amount": 66.9 },
+    { "description": "CETAPHIL GENTLE SKIN CLEANSER 125ML", "category": "cosmetic", "quantity": 1, "amount": 399.0 }
+  ],
+  "discount": 49.9,
+  "total_amount": 700.0
+}

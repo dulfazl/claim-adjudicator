@@ -1,0 +1,17 @@
+{
+  "document_type": "bill",
+  "provider_name": "Nexa Diagnostics",
+  "patient_name": "Karthik Subramanian",
+  "doctor_name": "Dr. Sneha Iyer",
+  "bill_number": "NXD/BLR/0457",
+  "bill_date": "2026-09-03",
+  "diagnosis": null,
+  "line_items": [
+    { "description": "Lipid Profile", "category": "diagnostic", "quantity": null, "amount": 650.0 },
+    { "description": "HbA1c (Glycosylated Haemoglobin)", "category": "diagnostic", "quantity": null, "amount": 480.0 },
+    { "description": "Thyroid Profile - Total (T3, T4, TSH)", "category": "diagnostic", "quantity": null, "amount": 550.0 },
+    { "description": "Home Sample Collection Charges", "category": "other", "quantity": null, "amount": 100.0 }
+  ],
+  "discount": 180.0,
+  "total_amount": 1600.0
+}

@@ -1,0 +1,12 @@
+{
+  "document_type": "prescription",
+  "provider_name": "Lakeview Clinic",
+  "patient_name": "Karthik Subramanian",
+  "doctor_name": "Dr. Sneha Iyer",
+  "bill_number": null,
+  "bill_date": "2026-09-02",
+  "diagnosis": "Type 2 Diabetes Mellitus",
+  "line_items": [],
+  "discount": null,
+  "total_amount": null
+}
