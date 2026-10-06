@@ -1,0 +1,15 @@
+{
+  "name": "Standard OPD Cover",
+  "start_date": "2026-04-01",
+  "end_date": "2027-03-31",
+  "annual_limit": 15000,
+  "copay_percent": 10,
+  "claim_window_days": 30,
+  "category_limits": {
+    "consultation": 1000,
+    "diagnostic": 3000,
+    "pharmacy": 2000,
+    "procedure": 5000
+  },
+  "prescription_required": ["pharmacy", "diagnostic"]
+}

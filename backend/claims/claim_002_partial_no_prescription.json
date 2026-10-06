@@ -1,0 +1,6 @@
+{
+  "member": { "name": "Ananya Rao", "used_this_year": 0 },
+  "submitted_on": "2026-09-20",
+  "documents": ["001_clinic_bill", "002_pharmacy_bill"],
+  "expected": { "status": "PARTIAL", "approved": "1592.10" }
+}
