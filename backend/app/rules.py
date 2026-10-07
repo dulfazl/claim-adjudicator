@@ -11,7 +11,7 @@ from app.claims import Claim, Decision, ItemDecision, Policy
 from app.schemas import Bill
 from app.text import normalize
 
-ZERO = Decimal("0")
+ZERO = Decimal("0.00")
 
 
 def money(value) -> Decimal:
