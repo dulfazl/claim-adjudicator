@@ -1,0 +1,43 @@
+{
+  "document_type": "bill",
+  "provider_name": "NEW LIFE DRUG HOUSE",
+  "patient_name": "Lakshmi Narayanan",
+  "doctor_name": "Dr. Kavita Deshmukh",
+  "bill_number": "NLD/2026/46178",
+  "bill_date": "2026-04-13",
+  "diagnosis": null,
+  "line_items": [
+    {
+      "description": "AZITHRAL 500 TAB 5S",
+      "category": "pharmacy",
+      "quantity": 1.0,
+      "amount": 126.7
+    },
+    {
+      "description": "ATORVA 10 TAB 15S",
+      "category": "pharmacy",
+      "quantity": 1.0,
+      "amount": 93.8
+    },
+    {
+      "description": "ROCIN ADVANCE TAB 15S",
+      "category": "pharmacy",
+      "quantity": 3.0,
+      "amount": 96.0
+    },
+    {
+      "description": "ASCORIL LS SYP 100ML",
+      "category": "pharmacy",
+      "quantity": 2.0,
+      "amount": 242.6
+    },
+    {
+      "description": "CETAPHIL GENTLE SKIN CLEANSER 125ML",
+      "category": "cosmetic",
+      "quantity": 3.0,
+      "amount": 1195.8
+    }
+  ],
+  "discount": 175.49,
+  "total_amount": 2079.41
+}

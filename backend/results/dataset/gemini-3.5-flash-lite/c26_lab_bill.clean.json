@@ -1,0 +1,49 @@
+{
+  "document_type": "bill",
+  "provider_name": "PathPoint Labs",
+  "patient_name": "Mr. Harpreet Singh",
+  "doctor_name": "Dr. Mohammed Farooq",
+  "bill_number": "PL-76644",
+  "bill_date": "2026-06-30",
+  "diagnosis": null,
+  "line_items": [
+    {
+      "description": "X-Ray Chest PA View",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 450.0
+    },
+    {
+      "description": "Lipid Profile",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 680.0
+    },
+    {
+      "description": "ECG",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 270.0
+    },
+    {
+      "description": "Liver Function Test",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 630.0
+    },
+    {
+      "description": "Fasting Blood Sugar",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 120.0
+    },
+    {
+      "description": "Home Sample Collection Charges",
+      "category": "other",
+      "quantity": null,
+      "amount": 80.0
+    }
+  ],
+  "discount": 0.0,
+  "total_amount": 2230.0
+}

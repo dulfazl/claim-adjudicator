@@ -1,0 +1,25 @@
+{
+  "document_type": "bill",
+  "provider_name": "BRIGHTSMILE DENTAL CARE",
+  "patient_name": "Fatima Sheikh",
+  "doctor_name": "Dr. Pooja Bhat",
+  "bill_number": "BDC-29291",
+  "bill_date": "2026-09-14",
+  "diagnosis": "Dental caries",
+  "line_items": [
+    {
+      "description": "Consultation Fee",
+      "category": "consultation",
+      "quantity": 1.0,
+      "amount": 700.0
+    },
+    {
+      "description": "Tooth Extraction",
+      "category": "procedure",
+      "quantity": 2.0,
+      "amount": 1500.0
+    }
+  ],
+  "discount": null,
+  "total_amount": 2200.0
+}

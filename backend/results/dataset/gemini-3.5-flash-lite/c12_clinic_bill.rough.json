@@ -1,0 +1,37 @@
+{
+  "document_type": "bill",
+  "provider_name": "SUNRISE FAMILY CLINIC",
+  "patient_name": "Mrs. Meera Pillai",
+  "doctor_name": "Dr. Arjun Nair",
+  "bill_number": "SFC-60917",
+  "bill_date": "2026-08-31",
+  "diagnosis": null,
+  "line_items": [
+    {
+      "description": "Follow-up Consultation",
+      "category": "consultation",
+      "quantity": 1.0,
+      "amount": 500.0
+    },
+    {
+      "description": "Vitamin D (25-OH)",
+      "category": "diagnostic",
+      "quantity": 2.0,
+      "amount": 900.0
+    },
+    {
+      "description": "Ultrasound Abdomen",
+      "category": "diagnostic",
+      "quantity": 3.0,
+      "amount": 1200.0
+    },
+    {
+      "description": "X-Ray Chest PA View",
+      "category": "diagnostic",
+      "quantity": 4.0,
+      "amount": 420.0
+    }
+  ],
+  "discount": null,
+  "total_amount": 3020.0
+}

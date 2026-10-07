@@ -1,0 +1,37 @@
+{
+  "document_type": "bill",
+  "provider_name": "MEDKART CHEMISTS",
+  "patient_name": "Imran Qureshi",
+  "doctor_name": "Anil Hegde",
+  "bill_number": "INV849973",
+  "bill_date": "2026-05-22",
+  "diagnosis": null,
+  "line_items": [
+    {
+      "description": "AUGMENTIN 625 DUO TAB 10S",
+      "category": "pharmacy",
+      "quantity": 3.0,
+      "amount": 604.5
+    },
+    {
+      "description": "MONTAIR LC TAB 10S",
+      "category": "pharmacy",
+      "quantity": 2.0,
+      "amount": 396.8
+    },
+    {
+      "description": "OTRIVIN NASAL SPRAY 10ML",
+      "category": "pharmacy",
+      "quantity": 3.0,
+      "amount": 308.1
+    },
+    {
+      "description": "ATORVA 10 TAB 15S",
+      "category": "pharmacy",
+      "quantity": 3.0,
+      "amount": 253.5
+    }
+  ],
+  "discount": null,
+  "total_amount": 1562.9
+}

@@ -1,0 +1,31 @@
+{
+  "document_type": "bill",
+  "provider_name": "Aarogya Health Point",
+  "patient_name": "Mr. Rohan Mehta",
+  "doctor_name": "Dr. Mohammed Farooq",
+  "bill_number": "AHP/2026/54433",
+  "bill_date": "2026-08-30",
+  "diagnosis": null,
+  "line_items": [
+    {
+      "description": "Consultation Fee",
+      "category": "consultation",
+      "quantity": null,
+      "amount": 850.0
+    },
+    {
+      "description": "HbA1c",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 480.0
+    },
+    {
+      "description": "Urine Routine Examination",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 160.0
+    }
+  ],
+  "discount": null,
+  "total_amount": 1490.0
+}

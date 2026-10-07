@@ -1,0 +1,43 @@
+{
+  "document_type": "bill",
+  "provider_name": "AAROGYA HEALTH POINT",
+  "patient_name": "Ms. PRIYA NAIR",
+  "doctor_name": "Dr. Kavita Deshmukh",
+  "bill_number": "AHP-2026/44195",
+  "bill_date": "2026-08-09",
+  "diagnosis": "Migraine",
+  "line_items": [
+    {
+      "description": "Consultation Fee",
+      "category": "consultation",
+      "quantity": null,
+      "amount": 1200.0
+    },
+    {
+      "description": "X-Ray Chest PA View",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 490.0
+    },
+    {
+      "description": "Dengue NS1 Antigen Test",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 600.0
+    },
+    {
+      "description": "Urine Routine Examination",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 160.0
+    },
+    {
+      "description": "Suturing (minor)",
+      "category": "procedure",
+      "quantity": null,
+      "amount": 1250.0
+    }
+  ],
+  "discount": null,
+  "total_amount": 3700.0
+}

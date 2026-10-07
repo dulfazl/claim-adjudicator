@@ -1,0 +1,43 @@
+{
+  "document_type": "bill",
+  "provider_name": "Nexa Diagnostics",
+  "patient_name": "Ms. Priya Nair",
+  "doctor_name": "Dr. Arjun Nair",
+  "bill_number": "ND/2026/02706",
+  "bill_date": "2026-09-03",
+  "diagnosis": null,
+  "line_items": [
+    {
+      "description": "ECG",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 370.0
+    },
+    {
+      "description": "Complete Blood Count (CBC)",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 330.0
+    },
+    {
+      "description": "Liver Function Test",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 650.0
+    },
+    {
+      "description": "HbA1c",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 430.0
+    },
+    {
+      "description": "Lipid Profile",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 610.0
+    }
+  ],
+  "discount": 119.5,
+  "total_amount": 2270.5
+}

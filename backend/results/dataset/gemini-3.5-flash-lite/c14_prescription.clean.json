@@ -1,0 +1,12 @@
+{
+  "document_type": "prescription",
+  "provider_name": "Aarogya Health Point",
+  "patient_name": "Mrs. Meera Pillai",
+  "doctor_name": "Dr. S. Venkatesh",
+  "bill_number": null,
+  "bill_date": "2026-06-30",
+  "diagnosis": "Migraine",
+  "line_items": [],
+  "discount": null,
+  "total_amount": null
+}

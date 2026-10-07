@@ -1,0 +1,37 @@
+{
+  "document_type": "bill",
+  "provider_name": "SRI BALAJI MEDICALS",
+  "patient_name": "VIKRAM SHETTY",
+  "doctor_name": "R. Menon",
+  "bill_number": "SBM-2485",
+  "bill_date": "2026-05-06",
+  "diagnosis": null,
+  "line_items": [
+    {
+      "description": "ASCORIL LS SYP 100ML",
+      "category": "pharmacy",
+      "quantity": 2.0,
+      "amount": 249.0
+    },
+    {
+      "description": "ELECTRAL PWD 21.8G",
+      "category": "pharmacy",
+      "quantity": 2.0,
+      "amount": 40.6
+    },
+    {
+      "description": "AZITHRAL 500 TAB 5S",
+      "category": "pharmacy",
+      "quantity": 2.0,
+      "amount": 248.6
+    },
+    {
+      "description": "CETAPHIL GENTLE SKIN CLEANSER 125ML",
+      "category": "cosmetic",
+      "quantity": 1.0,
+      "amount": 391.6
+    }
+  ],
+  "discount": null,
+  "total_amount": 929.8
+}

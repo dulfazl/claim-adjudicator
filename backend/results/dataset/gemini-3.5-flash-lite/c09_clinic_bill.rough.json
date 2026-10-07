@@ -1,0 +1,19 @@
+{
+  "document_type": "bill",
+  "provider_name": "Greenleaf Polyclinic",
+  "patient_name": "Mrs. Divya Menon",
+  "doctor_name": "Dr. Anil Hegde",
+  "bill_number": "INV575162",
+  "bill_date": "2026-05-31",
+  "diagnosis": "Lower back pain",
+  "line_items": [
+    {
+      "description": "Consultation Fee",
+      "category": "consultation",
+      "quantity": null,
+      "amount": 550.0
+    }
+  ],
+  "discount": null,
+  "total_amount": 550.0
+}

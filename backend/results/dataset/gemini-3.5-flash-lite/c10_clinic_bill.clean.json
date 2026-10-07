@@ -1,0 +1,25 @@
+{
+  "document_type": "bill",
+  "provider_name": "Sunrise Family Clinic",
+  "patient_name": "Mrs. Meera Pillai",
+  "doctor_name": "Dr. Mohammed Farooq",
+  "bill_number": null,
+  "bill_date": "2026-06-28",
+  "diagnosis": "Migraine",
+  "line_items": [
+    {
+      "description": "Consultation Fee",
+      "category": "consultation",
+      "quantity": null,
+      "amount": 550.0
+    },
+    {
+      "description": "Wound Dressing",
+      "category": "procedure",
+      "quantity": null,
+      "amount": 300.0
+    }
+  ],
+  "discount": null,
+  "total_amount": 850.0
+}

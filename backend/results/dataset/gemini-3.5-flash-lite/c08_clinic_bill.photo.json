@@ -1,0 +1,31 @@
+{
+  "document_type": "bill",
+  "provider_name": "Aarogya Health Point",
+  "patient_name": "Mr. IMRAN QURESHI",
+  "doctor_name": "Dr. Arjun Nair",
+  "bill_number": "AHP/2026/89116",
+  "bill_date": "2026-05-26",
+  "diagnosis": "Acute viral fever",
+  "line_items": [
+    {
+      "description": "Specialist Consultation",
+      "category": "consultation",
+      "quantity": 1.0,
+      "amount": 1450.0
+    },
+    {
+      "description": "X-Ray Chest PA View",
+      "category": "diagnostic",
+      "quantity": 2.0,
+      "amount": 450.0
+    },
+    {
+      "description": "Dengue NS1 Antigen Test",
+      "category": "diagnostic",
+      "quantity": 3.0,
+      "amount": 510.0
+    }
+  ],
+  "discount": null,
+  "total_amount": 2410.0
+}

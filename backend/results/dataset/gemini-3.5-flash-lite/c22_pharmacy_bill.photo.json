@@ -1,0 +1,31 @@
+{
+  "document_type": "bill",
+  "provider_name": "New Life Drug House",
+  "patient_name": "Mr. Imran Qureshi",
+  "doctor_name": "Dr. Pooja Bhat",
+  "bill_number": "NLD-75632",
+  "bill_date": "2026-05-07",
+  "diagnosis": null,
+  "line_items": [
+    {
+      "description": "OTRIVIN NASAL SPRAY 10ML",
+      "category": "pharmacy",
+      "quantity": 3.0,
+      "amount": 304.2
+    },
+    {
+      "description": "ROCIN ADVANCE TAB 15S",
+      "category": "pharmacy",
+      "quantity": 2.0,
+      "amount": 62.0
+    },
+    {
+      "description": "MONTAIR LC TAB 10S",
+      "category": "pharmacy",
+      "quantity": 3.0,
+      "amount": 548.1
+    }
+  ],
+  "discount": 137.15,
+  "total_amount": 777.15
+}
