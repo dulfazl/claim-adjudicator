@@ -1,9 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
-  cacheComponents: true,
-  partialPrefetching: true,
+  // Build plain static files into out/, so the Python backend can serve the screen itself.
+  output: "export",
   turbopack: {
     rules: {
       "*.css": {

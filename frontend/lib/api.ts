@@ -1,4 +1,6 @@
-export const API_URL = process.env.NEXT_PUBLIC_API_URL ?? "http://localhost:8000";
+// Empty in production, where the backend serves this screen and the API from one address.
+// In development it comes from .env.development.
+export const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? "") + "/api";
 
 export type Status = "APPROVED" | "PARTIAL" | "REJECTED" | "MANUAL_REVIEW" | "RETAKE_PHOTO";
 export type ImageVersion = "clean" | "photo" | "rough";

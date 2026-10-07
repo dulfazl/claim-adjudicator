@@ -12,3 +12,6 @@ backend/dataset/*.jpg
 
 # local tool settings
 .claude/
+
+# the built front end, copied in when the image is built
+backend/static/

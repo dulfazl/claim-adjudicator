@@ -81,7 +81,7 @@ npm install
 npm run dev
 ```
 
-Open http://localhost:3000 and pick a sample claim. Switch the image quality to "Rough photo" to see the sharpness check turn a claim away.
+Open http://localhost:3000 and pick a sample claim. Switch the image quality to "Rough photo" to see the sharpness check turn a claim away. The API has its own page at http://localhost:8000/docs.
 
 Use made-up documents only. Images are sent to Gemini's free tier, which may keep them.
 
@@ -89,13 +89,30 @@ Use made-up documents only. Images are sent to Gemini's free tier, which may kee
 
 ```bash
 cd backend
-.venv/bin/python -m pytest                                                       # 65 tests, no API calls
+.venv/bin/python -m pytest                                                       # 66 tests, no API calls
 .venv/bin/python -m app.adjudicate claims/claim_004_partial_limits.json --offline  # one claim, no API calls
 .venv/bin/python -m app.adjudicate claims/claim_004_partial_limits.json            # the same claim, read by the model
 .venv/bin/python -m app.evaluate                                                 # re-score the saved run, no API calls
 ```
 
 To rebuild the test set and its images: `python -m scripts.generate_dataset`, `playwright install chromium`, then `python -m scripts.render_samples dataset`.
+
+## Deploy
+
+The [`Dockerfile`](Dockerfile) builds one image: the screen is compiled to static files and the Python backend serves both it and the API from a single address. [`render.yaml`](render.yaml) describes it as a free web service on [Render](https://render.com):
+
+1. In the Render dashboard choose **New > Blueprint** and pick this repository.
+2. Paste your Gemini API key when asked for `GEMINI_API_KEY`. It is stored by Render, not in the repository.
+3. Wait for the first build, then open the address Render gives you.
+
+A free service sleeps after 15 minutes without visitors, so the first visit after a quiet spell takes up to a minute to load.
+
+To run the same image yourself:
+
+```bash
+docker build -t claim-adjudicator .
+docker run -p 8000:8000 --env-file backend/.env claim-adjudicator
+```
 
 ## Layout
 
@@ -117,6 +134,8 @@ backend/
   results/          the model's saved answers and the scored summary
   tests/
 frontend/           Next.js screen
+Dockerfile          one image for the screen and the API
+render.yaml         free deployment on Render
 ```
 
 ## Design choices worth knowing
