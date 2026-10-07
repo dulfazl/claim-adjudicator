@@ -2,7 +2,8 @@
 
 from pathlib import Path
 
-from app.evaluate import same_number, score
+from app.claims import Decision
+from app.evaluate import decision_outcome, same_number, score
 from app.schemas import Bill
 from app.text import normalize
 
@@ -50,3 +51,16 @@ def test_an_invented_item_lowers_the_item_score():
     got.line_items = load("001_clinic_bill").line_items[:1]
     result = score(got, expected)
     assert result.items_right == 0 and result.items_total == 1
+
+
+def decision(status: str, approved: str) -> Decision:
+    return Decision(status=status, claimed="1000", approved=approved, steps=[], items=[])
+
+
+def test_decision_mistakes_are_sorted_by_how_dangerous_they_are():
+    truth = decision("PARTIAL", "800.00")
+    assert decision_outcome(decision("PARTIAL", "800.00"), truth) == "correct"
+    assert decision_outcome(decision("MANUAL_REVIEW", "0"), truth) == "sent to review"
+    assert decision_outcome(decision("APPROVED", "900.00"), truth) == "overpaid"
+    assert decision_outcome(decision("PARTIAL", "500.00"), truth) == "underpaid"
+    assert decision_outcome(decision("APPROVED", "900.00"), decision("MANUAL_REVIEW", "0")) == "missed review"
