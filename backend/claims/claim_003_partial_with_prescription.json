@@ -1,6 +1,16 @@
 {
-  "member": { "name": "Karthik Subramanian", "used_this_year": 0 },
+  "title": "Lab tests with a prescription",
+  "member": {
+    "name": "Karthik Subramanian",
+    "used_this_year": 0
+  },
   "submitted_on": "2026-09-10",
-  "documents": ["004_prescription", "003_lab_bill"],
-  "expected": { "status": "PARTIAL", "approved": "1359.10" }
+  "documents": [
+    "004_prescription",
+    "003_lab_bill"
+  ],
+  "expected": {
+    "status": "PARTIAL",
+    "approved": "1359.10"
+  }
 }

@@ -33,6 +33,6 @@ def test_a_blurred_photo_is_turned_away_without_calling_the_model(monkeypatch):
 
     monkeypatch.setattr("app.adjudicate.extract_bill", model_must_not_be_called)
     rough = (SAMPLES / "001_clinic_bill.rough.jpg").read_bytes()
-    decision = adjudicate({"name": "Ananya Rao"}, "2026-09-20", [(rough, "image/jpeg")])
+    decision, documents = adjudicate({"name": "Ananya Rao"}, "2026-09-20", [(rough, "image/jpeg")])
     assert decision.status == "RETAKE_PHOTO"
     assert "clearer photo" in decision.steps[0]

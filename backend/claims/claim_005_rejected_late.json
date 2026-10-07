@@ -1,6 +1,15 @@
 {
-  "member": { "name": "Fatima Sheikh", "used_this_year": 0 },
+  "title": "Dental bill submitted 100 days late",
+  "member": {
+    "name": "Fatima Sheikh",
+    "used_this_year": 0
+  },
   "submitted_on": "2026-12-30",
-  "documents": ["005_dental_bill"],
-  "expected": { "status": "REJECTED", "approved": "0.00" }
+  "documents": [
+    "005_dental_bill"
+  ],
+  "expected": {
+    "status": "REJECTED",
+    "approved": "0.00"
+  }
 }

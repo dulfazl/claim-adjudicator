@@ -105,7 +105,7 @@ def apply_category_limits(items: list[ItemDecision], policy: Policy) -> None:
         limit = policy.category_limits[item.category]
         room = max(limit - paid_so_far.get(item.category, ZERO), ZERO)
         if item.payable > room:
-            item.payable = room
+            item.payable = money(room)
             item.reason = f"Capped by the {item.category} limit of ₹{limit:,.2f} per claim."
         paid_so_far[item.category] = paid_so_far.get(item.category, ZERO) + item.payable
 
@@ -129,7 +129,7 @@ def decide(claim: Claim, policy: Policy) -> Decision:
     copay = money(payable * policy.copay_percent / 100)
     after_copay = payable - copay
     limit_left = max(policy.annual_limit - claim.member.used_this_year, ZERO)
-    approved = min(after_copay, limit_left)
+    approved = money(min(after_copay, limit_left))
 
     steps = [
         f"Documents checked: {len(bills)} bill(s), {len(prescriptions)} prescription(s).",
