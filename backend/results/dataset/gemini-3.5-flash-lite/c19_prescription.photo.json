@@ -1,0 +1,12 @@
+{
+  "document_type": "prescription",
+  "provider_name": "Aarogya Health Point",
+  "patient_name": "Harpreet Singh",
+  "doctor_name": "Dr. Pooja Bhat",
+  "bill_number": null,
+  "bill_date": "2026-09-02",
+  "diagnosis": null,
+  "line_items": [],
+  "discount": null,
+  "total_amount": null
+}

@@ -1,0 +1,37 @@
+{
+  "document_type": "bill",
+  "provider_name": "BrightSmile Dental Care",
+  "patient_name": "Mrs. Fatima Sheikh",
+  "doctor_name": "Dr. Pooja Bhat",
+  "bill_number": "BDC-25311",
+  "bill_date": "2026-04-27",
+  "diagnosis": "Irreversible pulpitis",
+  "line_items": [
+    {
+      "description": "Consultation Fee",
+      "category": "consultation",
+      "quantity": null,
+      "amount": 950.0
+    },
+    {
+      "description": "Tooth Extraction",
+      "category": "procedure",
+      "quantity": null,
+      "amount": 1500.0
+    },
+    {
+      "description": "Root Canal Treatment",
+      "category": "procedure",
+      "quantity": null,
+      "amount": 5000.0
+    },
+    {
+      "description": "Dental Veneer (cosmetic)",
+      "category": "cosmetic",
+      "quantity": null,
+      "amount": 7500.0
+    }
+  ],
+  "discount": null,
+  "total_amount": 14950.0
+}

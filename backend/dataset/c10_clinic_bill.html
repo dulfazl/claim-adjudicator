@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+body { position: relative; margin: 0; background: #fff; color: #1c1c1c; font-family: var(--font); font-size: 13px; }
+.num { text-align: right; }
+.pen { font-family: "Bradley Hand", "Noteworthy", cursive; color: #1b2f8a; font-size: 19px; }
+.tiny { margin-top: 14px; font-size: 10px; color: #555; }
+.stamp { position: absolute; right: 60px; bottom: 70px; transform: rotate(-17deg); border: 3px solid #c0392b; color: #c0392b;
+         font: bold 26px Arial; letter-spacing: 3px; padding: 4px 14px; border-radius: 6px; opacity: 0.4; }
+
+body { width: 700px; padding: 34px 42px; }
+.head { text-align: var(--align); border-bottom: 2px solid var(--accent); padding-bottom: 10px; }
+h1 { margin: 0; font-size: 23px; color: var(--accent); }
+.sub { font-size: 11px; color: #555; margin-top: 3px; }
+.title { text-align: center; font-weight: bold; letter-spacing: 2px; margin: 14px 0; }
+.meta { display: flex; justify-content: space-between; line-height: 1.7; }
+table { width: 100%; border-collapse: collapse; margin-top: 14px; }
+th, td { border: 1px solid #888; padding: 7px 9px; text-align: left; }
+th { background: #eee; }
+.total td { font-weight: bold; font-size: 14px; }
+.foot { margin-top: 16px; font-size: 12px; }
+</style>
+</head>
+<body style="--accent: #b3541e; --font: Georgia, serif; --align: center">
+
+<div class="head"><h1>Sunrise Family Clinic</h1><div class="sub">No. 77, 18th Main, HSR Layout, Bengaluru - 560055</div></div>
+<div class="title">BILL / RECEIPT</div>
+<div class="meta">
+  <div>Patient: <b>Mrs. Meera Pillai</b><br>Consultant: <b>Dr. Mohammed Farooq</b><br>Diagnosis: Migraine</div>
+  <div>Date: <b>28-Jun-2026</b></div>
+</div>
+<table>
+  <tr><th>#</th><th>Particulars</th><th class="num">Amount (Rs.)</th></tr>
+  <tr><td>1</td><td>Consultation Fee</td><td class="num">550.00</td></tr><tr><td>2</td><td>Wound Dressing</td><td class="num">300.00</td></tr>
+  <tr class="total"><td colspan="2" class="num">Amount Payable</td><td class="num"><span class="pen">850.00</span></td></tr>
+</table>
+<div class="foot">Mode of payment: UPI &nbsp;|&nbsp; Status: PAID</div>
+<div class="stamp">PAID</div>
+</body>
+</html>

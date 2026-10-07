@@ -1,0 +1,191 @@
+{
+  "model": "gemini-3.5-flash-lite",
+  "folder": "dataset",
+  "documents": 53,
+  "claims": 40,
+  "versions": {
+    "clean": {
+      "fields": [
+        477,
+        477
+      ],
+      "items": [
+        160,
+        160
+      ],
+      "documents_all_right": [
+        53,
+        53
+      ],
+      "missed_by_field": {},
+      "documents_with_mistakes": 0,
+      "blocked_by_sharpness_check": {},
+      "decisions_model_alone": {
+        "correct": 40
+      },
+      "decisions_whole_system": {
+        "correct": 40
+      },
+      "mistakes": []
+    },
+    "photo": {
+      "fields": [
+        477,
+        477
+      ],
+      "items": [
+        160,
+        160
+      ],
+      "documents_all_right": [
+        53,
+        53
+      ],
+      "missed_by_field": {},
+      "documents_with_mistakes": 0,
+      "blocked_by_sharpness_check": {},
+      "decisions_model_alone": {
+        "correct": 40
+      },
+      "decisions_whole_system": {
+        "correct": 40
+      },
+      "mistakes": []
+    },
+    "rough": {
+      "fields": [
+        441,
+        477
+      ],
+      "items": [
+        134,
+        160
+      ],
+      "documents_all_right": [
+        36,
+        53
+      ],
+      "missed_by_field": {
+        "bill_number": 15,
+        "bill_date": 11,
+        "line_items": 11,
+        "patient_name": 5,
+        "doctor_name": 2,
+        "total_amount": 2,
+        "discount": 1
+      },
+      "documents_with_mistakes": 17,
+      "blocked_by_sharpness_check": {
+        "bad readings": 17,
+        "good readings": 36
+      },
+      "decisions_model_alone": {
+        "correct": 31,
+        "sent to review": 6,
+        "underpaid": 3
+      },
+      "decisions_whole_system": {
+        "retake requested": 40
+      },
+      "mistakes": [
+        "c01_clinic_bill: bill_date: got '2025-08-16', expected '2026-08-16'",
+        "c13_pharmacy_bill: bill_date: got '2026-03-03', expected '2026-07-03'",
+        "c13_pharmacy_bill: bill_number: got 'HF-90186', expected 'HP-90398'",
+        "c13_pharmacy_bill: item missing or wrong: AUGMENTIN 625 DUO TAB 10S (pharmacy, 412.6)",
+        "c13_pharmacy_bill: item missing or wrong: CROCIN ADVANCE TAB 15S (pharmacy, 58.0)",
+        "c13_pharmacy_bill: item missing or wrong: ATORVA 10 TAB 15S (pharmacy, 175.4)",
+        "c13_pharmacy_bill: item missing or wrong: GLYCOMET 500 SR TAB 20S (pharmacy, 63.7)",
+        "c13_pharmacy_bill: item not expected: AUGMENTIN 625 DUO TAB 10S (pharmacy, 412.82)",
+        "c13_pharmacy_bill: item not expected: CROCIN ADVANCE TAB 15S (pharmacy, 38.0)",
+        "c13_pharmacy_bill: item not expected: ATORVA 10 TAB 15S (pharmacy, 175.46)",
+        "c13_pharmacy_bill: item not expected: GLYCOMET 500 SR TAB 20S (pharmacy, 83.7)",
+        "c14_pharmacy_bill: bill_date: got '2024-06-30', expected '2026-06-30'",
+        "c14_pharmacy_bill: bill_number: got 'MC/2024/61913', expected 'MC/2026/61813'",
+        "c14_pharmacy_bill: item missing or wrong: OTRIVIN NASAL SPRAY 10ML (pharmacy, 196.6)",
+        "c14_pharmacy_bill: item missing or wrong: AUGMENTIN 625 DUO TAB 10S (pharmacy, 211.6)",
+        "c14_pharmacy_bill: item not expected: STRIVER NASAL SPRAY 10ML (pharmacy, 196.4)",
+        "c14_pharmacy_bill: item not expected: AUGMENTIN 625 DUO TAB 10S (pharmacy, 211.8)",
+        "c15_pharmacy_bill: bill_date: got '2024-05-21', expected '2026-05-21'",
+        "c15_pharmacy_bill: patient_name: got 'Mrs. Meeta Pillai', expected 'Meera Pillai'",
+        "c15_pharmacy_bill: bill_number: got 'HC-70588', expected 'MC-70508'",
+        "c15_pharmacy_bill: item missing or wrong: ATORVA 10 TAB 15S (pharmacy, 88.4)",
+        "c15_pharmacy_bill: item missing or wrong: CROCIN ADVANCE TAB 15S (pharmacy, 60.6)",
+        "c15_pharmacy_bill: item missing or wrong: PAN 40 TAB 15S (pharmacy, 168.6)",
+        "c15_pharmacy_bill: item not expected: ATONIA 10 TAB 15S (pharmacy, 48.4)",
+        "c15_pharmacy_bill: item not expected: CROCIN ADVANCE TAB 15S (pharmacy, 60.8)",
+        "c15_pharmacy_bill: item not expected: PAN 40 TAB 15S (pharmacy, 148.6)",
+        "c16_pharmacy_bill: bill_number: got 'HP/2026/754541', expected 'HP/2026/04561'",
+        "c16_pharmacy_bill: item missing or wrong: ASCORIL LS SYP 100ML (pharmacy, 116.6)",
+        "c16_pharmacy_bill: item not expected: ASCORIL LS SYP 100ML (pharmacy, 118.65)",
+        "c17_pharmacy_bill: bill_date: got '2024-09-11', expected '2026-09-11'",
+        "c17_pharmacy_bill: bill_number: got 'MC/2024/43265', expected 'MC/2026/63205'",
+        "c17_pharmacy_bill: item missing or wrong: ELECTRAL PWD 21.8G (pharmacy, 66.6)",
+        "c17_pharmacy_bill: item not expected: ELECTRAL POW 21.8G (pharmacy, 44.8)",
+        "c18_pharmacy_bill: patient_name: got 'AASHREET SINGH', expected 'Harpreet Singh'",
+        "c18_pharmacy_bill: doctor_name: got 'Dr: Mohammed Farouq', expected 'Dr. Mohammed Farooq'",
+        "c18_pharmacy_bill: bill_number: got 'NLD-43236', expected 'NLD-43256'",
+        "c18_pharmacy_bill: item missing or wrong: MONTAIR LC TAB 10S (pharmacy, 198.7)",
+        "c18_pharmacy_bill: item missing or wrong: LAKME SUNSCREEN SPF50 50ML (cosmetic, 1106.7)",
+        "c18_pharmacy_bill: item not expected: MONTAIR LC TAB 10S (pharmacy, 196.7)",
+        "c18_pharmacy_bill: item not expected: LA Shield SUNSCREEN SPF50 50ML (cosmetic, 1108.7)",
+        "c19_pharmacy_bill: bill_date: got '2026-08-22', expected '2026-09-02'",
+        "c19_pharmacy_bill: patient_name: got 'Mr. Balpreet Singh', expected 'Harpreet Singh'",
+        "c19_pharmacy_bill: bill_number: got 'NLD/2026/13426', expected 'NLD/2026/13424'",
+        "c19_pharmacy_bill: discount: got 0.55, expected 83.55",
+        "c19_pharmacy_bill: item missing or wrong: ATORVA 10 TAB 15S (pharmacy, 183.0)",
+        "c19_pharmacy_bill: item missing or wrong: MONTAIR LC TAB 10S (pharmacy, 610.5)",
+        "c19_pharmacy_bill: item not expected: ATORVA 10 TAB 15S (pharmacy, 163.0)",
+        "c19_pharmacy_bill: item not expected: MONTAIR LC TAB 15S (pharmacy, 546.5)",
+        "c20_pharmacy_bill: bill_date: got '2023-05-22', expected '2026-05-22'",
+        "c20_pharmacy_bill: patient_name: got 'Mohd Imran Qureshi', expected 'Imran Qureshi'",
+        "c20_pharmacy_bill: bill_number: got '195849973', expected 'INV849973'",
+        "c20_pharmacy_bill: total_amount: got 1562.4, expected 1562.9",
+        "c20_pharmacy_bill: item missing or wrong: AUGMENTIN 625 DUO TAB 10S (pharmacy, 604.5)",
+        "c20_pharmacy_bill: item missing or wrong: MONTAIR LC TAB 10S (pharmacy, 396.8)",
+        "c20_pharmacy_bill: item missing or wrong: OTRIVIN NASAL SPRAY 10ML (pharmacy, 308.1)",
+        "c20_pharmacy_bill: item missing or wrong: ATORVA 10 TAB 15S (pharmacy, 253.5)",
+        "c20_pharmacy_bill: item not expected: AUGMENTIN 625 DUO TAB 10S (pharmacy, 624.0)",
+        "c20_pharmacy_bill: item not expected: MONTAIR LC TAB 10S (pharmacy, 394.8)",
+        "c20_pharmacy_bill: item not expected: OTRIVIN NASAL SPRAY 10ML (pharmacy, 108.1)",
+        "c20_pharmacy_bill: item not expected: ATORVA 10 TAB 15S (pharmacy, 435.5)",
+        "c21_pharmacy_bill: patient_name: got 'Lakshmi Natarajan', expected 'Lakshmi Narayanan'",
+        "c21_pharmacy_bill: bill_number: got 'NLD/2026/44116', expected 'NLD/2026/46178'",
+        "c22_pharmacy_bill: bill_date: got '2024-03-27', expected '2026-05-07'",
+        "c22_pharmacy_bill: bill_number: got 'ALD-75652', expected 'NLD-75632'",
+        "c22_pharmacy_bill: total_amount: got 777.2, expected 777.15",
+        "c22_pharmacy_bill: item missing or wrong: OTRIVIN NASAL SPRAY 10ML (pharmacy, 304.2)",
+        "c22_pharmacy_bill: item not expected: OTRIVIN NASAL SPRAY 10ML (pharmacy, 304.25)",
+        "c23_pharmacy_bill: bill_number: got 'DW2929442', expected 'INV292842'",
+        "c23_pharmacy_bill: item missing or wrong: MONTAIR LC TAB 10S (pharmacy, 395.8)",
+        "c23_pharmacy_bill: item missing or wrong: PAN 40 TAB 15S (pharmacy, 474.9)",
+        "c23_pharmacy_bill: item missing or wrong: OTRIVIN NASAL SPRAY 10ML (pharmacy, 203.2)",
+        "c23_pharmacy_bill: item not expected: MONIKIR LC TAB 10S (pharmacy, 190.8)",
+        "c23_pharmacy_bill: item not expected: PAN 40 TAB 15S (pharmacy, 474.3)",
+        "c23_pharmacy_bill: item not expected: DERIHALER NASAL SPRAY 10ML (pharmacy, 331.6)",
+        "c24_pharmacy_bill: bill_date: got '2024-03-04', expected '2026-05-06'",
+        "c24_pharmacy_bill: doctor_name: got 'Dr. A. Menon', expected 'Dr. R. Menon'",
+        "c24_pharmacy_bill: bill_number: got 'BNB-2495', expected 'SBM-2485'",
+        "c24_pharmacy_bill: item missing or wrong: ELECTRAL PWD 21.8G (pharmacy, 40.6)",
+        "c24_pharmacy_bill: item missing or wrong: AZITHRAL 500 TAB 5S (pharmacy, 248.6)",
+        "c24_pharmacy_bill: item missing or wrong: CETAPHIL GENTLE SKIN CLEANSER 125ML (cosmetic, 391.6)",
+        "c24_pharmacy_bill: item not expected: ELECTRAL PWD 21.8G (pharmacy, 40.4)",
+        "c24_pharmacy_bill: item not expected: AZITORAL 500 TAB 5S (pharmacy, 248.8)",
+        "c24_pharmacy_bill: item not expected: CETAPHIL GENTLE SKIN CLEANSER 125ML (pharmacy, 391.6)",
+        "c26_lab_bill: bill_number: got 'PL-78644', expected 'PL-76644'",
+        "c28_lab_bill: bill_date: got '2026-06-23', expected '2026-08-23'",
+        "c32_lab_bill: bill_date: got '2020-08-08', expected '2026-08-18'",
+        "c32_lab_bill: bill_number: got 'CDC-78590', expected 'CDC-76302'",
+        "c39_dental_bill: bill_number: got 'BDC-49053', expected 'BDC-69053'",
+        "claim c01: underpaid: got REJECTED ₹0.00, should be APPROVED ₹1,377.00",
+        "claim c14: underpaid: got REJECTED ₹0.00, should be APPROVED ₹999.48",
+        "claim c15: sent to review: got MANUAL_REVIEW ₹0.00, should be PARTIAL ₹500.00",
+        "claim c16: sent to review: got MANUAL_REVIEW ₹0.00, should be REJECTED ₹0.00",
+        "claim c18: sent to review: got MANUAL_REVIEW ₹0.00, should be REJECTED ₹0.00",
+        "claim c19: sent to review: got MANUAL_REVIEW ₹0.00, should be APPROVED ₹676.75",
+        "claim c20: sent to review: got MANUAL_REVIEW ₹0.00, should be REJECTED ₹0.00",
+        "claim c23: sent to review: got MANUAL_REVIEW ₹0.00, should be APPROVED ₹1,333.89",
+        "claim c24: underpaid: got REJECTED ₹0.00, should be PARTIAL ₹484.38"
+      ]
+    }
+  }
+}

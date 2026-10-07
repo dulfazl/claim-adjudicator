@@ -1,0 +1,37 @@
+{
+  "document_type": "bill",
+  "provider_name": "Aarogya Health Point",
+  "patient_name": "Rohan Mehta",
+  "doctor_name": "Dr. Anil Hegde",
+  "bill_number": "INV761215",
+  "bill_date": "2026-08-16",
+  "diagnosis": "Hypertension",
+  "line_items": [
+    {
+      "description": "Follow-up Consultation",
+      "category": "consultation",
+      "quantity": null,
+      "amount": 350.0
+    },
+    {
+      "description": "Urine Routine Examination",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 210.0
+    },
+    {
+      "description": "X-Ray Chest PA View",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 370.0
+    },
+    {
+      "description": "Dengue NS1 Antigen Test",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 600.0
+    }
+  ],
+  "discount": null,
+  "total_amount": 1530.0
+}

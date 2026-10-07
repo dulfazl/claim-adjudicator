@@ -1,0 +1,37 @@
+{
+  "document_type": "bill",
+  "provider_name": "MEDISURE PATH LAB",
+  "patient_name": "Mr. Vikram Shetty",
+  "doctor_name": "Dr. Arjun Nair",
+  "bill_number": "MPL-29685",
+  "bill_date": "2026-09-01",
+  "diagnosis": null,
+  "line_items": [
+    {
+      "description": "Dengue NS1 Antigen Test",
+      "category": "diagnostic",
+      "quantity": 1.0,
+      "amount": 650.0
+    },
+    {
+      "description": "HbA1c",
+      "category": "diagnostic",
+      "quantity": 2.0,
+      "amount": 410.0
+    },
+    {
+      "description": "Complete Blood Count (CBC)",
+      "category": "diagnostic",
+      "quantity": 3.0,
+      "amount": 300.0
+    },
+    {
+      "description": "Fasting Blood Sugar",
+      "category": "diagnostic",
+      "quantity": 4.0,
+      "amount": 90.0
+    }
+  ],
+  "discount": 217.5,
+  "total_amount": 1232.5
+}

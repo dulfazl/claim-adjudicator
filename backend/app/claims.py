@@ -42,7 +42,7 @@ class ItemDecision(BaseModel):
 
 
 class Decision(BaseModel):
-    status: Literal["APPROVED", "PARTIAL", "REJECTED", "MANUAL_REVIEW"]
+    status: Literal["APPROVED", "PARTIAL", "REJECTED", "MANUAL_REVIEW", "RETAKE_PHOTO"]
     claimed: Decimal
     approved: Decimal
     steps: list[str] = Field(description="What was checked and calculated, in order.")

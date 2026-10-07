@@ -1,0 +1,37 @@
+{
+  "document_type": "bill",
+  "provider_name": "MEDKART CHEMISTS",
+  "patient_name": "Mrs. Meera Pillai",
+  "doctor_name": null,
+  "bill_number": "MC/2024/61913",
+  "bill_date": "2024-06-30",
+  "diagnosis": null,
+  "line_items": [
+    {
+      "description": "MONTAIR LC TAB 15S",
+      "category": "pharmacy",
+      "quantity": 3.0,
+      "amount": 611.7
+    },
+    {
+      "description": "STRIVER NASAL SPRAY 10ML",
+      "category": "pharmacy",
+      "quantity": 2.0,
+      "amount": 196.4
+    },
+    {
+      "description": "VOLINI GEL 30G",
+      "category": "pharmacy",
+      "quantity": 2.0,
+      "amount": 286.6
+    },
+    {
+      "description": "AUGMENTIN 625 DUO TAB 10S",
+      "category": "pharmacy",
+      "quantity": 1.0,
+      "amount": 211.8
+    }
+  ],
+  "discount": 195.97,
+  "total_amount": 1110.53
+}

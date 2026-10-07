@@ -1,0 +1,37 @@
+{
+  "document_type": "bill",
+  "provider_name": "Nexa Diagnostics",
+  "patient_name": "Meera Pillai",
+  "doctor_name": "Dr. Kavita Deshmukh",
+  "bill_number": "INV856970",
+  "bill_date": "2026-06-15",
+  "diagnosis": null,
+  "line_items": [
+    {
+      "description": "Lipid Profile",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 550.0
+    },
+    {
+      "description": "X-Ray Chest PA View",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 460.0
+    },
+    {
+      "description": "HbA1c",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 430.0
+    },
+    {
+      "description": "Home Sample Collection Charges",
+      "category": "other",
+      "quantity": null,
+      "amount": 150.0
+    }
+  ],
+  "discount": null,
+  "total_amount": 1590.0
+}

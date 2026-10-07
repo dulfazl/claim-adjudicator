@@ -1,0 +1,43 @@
+{
+  "document_type": "bill",
+  "provider_name": "Nexa Diagnostics",
+  "patient_name": "Harpreet Singh",
+  "doctor_name": "Dr. Pooja Bhat",
+  "bill_number": "ND-50270",
+  "bill_date": "2026-07-04",
+  "diagnosis": null,
+  "line_items": [
+    {
+      "description": "X-Ray Chest PA View",
+      "category": "diagnostic",
+      "quantity": 1.0,
+      "amount": 440.0
+    },
+    {
+      "description": "HbA1c",
+      "category": "diagnostic",
+      "quantity": 2.0,
+      "amount": 450.0
+    },
+    {
+      "description": "ECG",
+      "category": "diagnostic",
+      "quantity": 3.0,
+      "amount": 340.0
+    },
+    {
+      "description": "Dengue NS1 Antigen Test",
+      "category": "diagnostic",
+      "quantity": 4.0,
+      "amount": 630.0
+    },
+    {
+      "description": "Thyroid Profile (T3, T4, TSH)",
+      "category": "diagnostic",
+      "quantity": 5.0,
+      "amount": 540.0
+    }
+  ],
+  "discount": 240.0,
+  "total_amount": 2160.0
+}

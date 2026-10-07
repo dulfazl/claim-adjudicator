@@ -1,0 +1,43 @@
+{
+  "document_type": "bill",
+  "provider_name": "MedKart Chemists",
+  "patient_name": "Ananya Rao",
+  "doctor_name": "Dr. Anil Hegde",
+  "bill_number": "MC/2026/63205",
+  "bill_date": "2026-09-11",
+  "diagnosis": null,
+  "line_items": [
+    {
+      "description": "AZITHRAL 500 TAB 5S",
+      "category": "pharmacy",
+      "quantity": 3.0,
+      "amount": 397.8
+    },
+    {
+      "description": "ELECTRAL PWD 21.8G",
+      "category": "pharmacy",
+      "quantity": 3.0,
+      "amount": 66.6
+    },
+    {
+      "description": "PAN 40 TAB 15S",
+      "category": "pharmacy",
+      "quantity": 2.0,
+      "amount": 322.0
+    },
+    {
+      "description": "DOLO 650 TAB 15S",
+      "category": "pharmacy",
+      "quantity": 1.0,
+      "amount": 31.8
+    },
+    {
+      "description": "ASCORIL LS SYP 100ML",
+      "category": "pharmacy",
+      "quantity": 3.0,
+      "amount": 351.0
+    }
+  ],
+  "discount": 58.46,
+  "total_amount": 1110.74
+}

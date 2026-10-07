@@ -1,0 +1,31 @@
+{
+  "document_type": "bill",
+  "provider_name": "CityCare Medical Centre",
+  "patient_name": "Mr. Rohan Mehta",
+  "doctor_name": "Dr. Kavita Deshmukh",
+  "bill_number": "CMC-16446",
+  "bill_date": "2026-07-10",
+  "diagnosis": "Acute gastroenteritis",
+  "line_items": [
+    {
+      "description": "Consultation Fee",
+      "category": "consultation",
+      "quantity": null,
+      "amount": 950.0
+    },
+    {
+      "description": "ECG",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 370.0
+    },
+    {
+      "description": "Fasting Blood Sugar",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 110.0
+    }
+  ],
+  "discount": null,
+  "total_amount": 1430.0
+}

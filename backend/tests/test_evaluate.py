@@ -2,7 +2,8 @@
 
 from pathlib import Path
 
-from app.evaluate import same_number, score
+from app.claims import Decision
+from app.evaluate import decision_outcome, same_number, score
 from app.schemas import Bill
 from app.text import normalize
 
@@ -24,6 +25,15 @@ def test_a_missing_number_only_matches_a_missing_number():
     assert not same_number(None, 0.0)
     assert same_number(700.0, 700.004)
     assert not same_number(700.0, 70.0)
+
+
+def test_a_zero_discount_is_the_same_as_no_discount_but_a_zero_total_is_not_a_missing_total():
+    expected = load("001_clinic_bill")  # discount is None
+    got = expected.model_copy(deep=True)
+    got.discount = 0.0
+    assert score(got, expected).wrong_fields == []
+    got.total_amount = None
+    assert score(got, expected).wrong_fields == ["total_amount"]
 
 
 def test_a_perfect_extraction_gets_full_marks():
@@ -50,3 +60,16 @@ def test_an_invented_item_lowers_the_item_score():
     got.line_items = load("001_clinic_bill").line_items[:1]
     result = score(got, expected)
     assert result.items_right == 0 and result.items_total == 1
+
+
+def decision(status: str, approved: str) -> Decision:
+    return Decision(status=status, claimed="1000", approved=approved, steps=[], items=[])
+
+
+def test_decision_mistakes_are_sorted_by_how_dangerous_they_are():
+    truth = decision("PARTIAL", "800.00")
+    assert decision_outcome(decision("PARTIAL", "800.00"), truth) == "correct"
+    assert decision_outcome(decision("MANUAL_REVIEW", "0"), truth) == "sent to review"
+    assert decision_outcome(decision("APPROVED", "900.00"), truth) == "overpaid"
+    assert decision_outcome(decision("PARTIAL", "500.00"), truth) == "underpaid"
+    assert decision_outcome(decision("APPROVED", "900.00"), decision("MANUAL_REVIEW", "0")) == "missed review"

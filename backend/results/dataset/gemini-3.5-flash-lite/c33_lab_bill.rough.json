@@ -1,0 +1,43 @@
+{
+  "document_type": "bill",
+  "provider_name": "MEDISURE PATH LAB",
+  "patient_name": "Mr. Imran Qureshi",
+  "doctor_name": "Dr. Kavita Deshmukh",
+  "bill_number": "INV194618",
+  "bill_date": "2026-06-01",
+  "diagnosis": null,
+  "line_items": [
+    {
+      "description": "ECG",
+      "category": "diagnostic",
+      "quantity": 1.0,
+      "amount": 270.0
+    },
+    {
+      "description": "Fasting Blood Sugar",
+      "category": "diagnostic",
+      "quantity": 2.0,
+      "amount": 90.0
+    },
+    {
+      "description": "X-Ray Chest PA View",
+      "category": "diagnostic",
+      "quantity": 3.0,
+      "amount": 350.0
+    },
+    {
+      "description": "Thyroid Profile (T3, T4, TSH)",
+      "category": "diagnostic",
+      "quantity": 4.0,
+      "amount": 450.0
+    },
+    {
+      "description": "Vitamin D (25-OH)",
+      "category": "diagnostic",
+      "quantity": 5.0,
+      "amount": 1350.0
+    }
+  ],
+  "discount": 0.0,
+  "total_amount": 2510.0
+}

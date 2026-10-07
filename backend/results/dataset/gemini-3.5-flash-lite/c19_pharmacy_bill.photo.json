@@ -1,0 +1,31 @@
+{
+  "document_type": "bill",
+  "provider_name": "NEW LIFE DRUG HOUSE",
+  "patient_name": "Mr. Harpreet Singh",
+  "doctor_name": "Dr. Pooja Bhat",
+  "bill_number": "NLD/2026/13424",
+  "bill_date": "2026-09-02",
+  "diagnosis": null,
+  "line_items": [
+    {
+      "description": "ATORVA 10 TAB 15S",
+      "category": "pharmacy",
+      "quantity": 2.0,
+      "amount": 183.0
+    },
+    {
+      "description": "MONTAIR LC TAB 10S",
+      "category": "pharmacy",
+      "quantity": 3.0,
+      "amount": 610.5
+    },
+    {
+      "description": "ELECTRAL PWD 21.8G",
+      "category": "pharmacy",
+      "quantity": 2.0,
+      "amount": 42.0
+    }
+  ],
+  "discount": 83.55,
+  "total_amount": 751.95
+}

@@ -1,0 +1,25 @@
+{
+  "document_type": "bill",
+  "provider_name": "CLARITY DIAGNOSTIC CENTRE",
+  "patient_name": "Priya Nair",
+  "doctor_name": "Dr. Kavita Deshmukh",
+  "bill_number": "CDC-78590",
+  "bill_date": "2020-08-08",
+  "diagnosis": null,
+  "line_items": [
+    {
+      "description": "Thyroid Profile (T3, T4, TSH)",
+      "category": "diagnostic",
+      "quantity": 1.0,
+      "amount": 520.0
+    },
+    {
+      "description": "Fasting Blood Sugar",
+      "category": "diagnostic",
+      "quantity": 2.0,
+      "amount": 140.0
+    }
+  ],
+  "discount": 0.0,
+  "total_amount": 660.0
+}

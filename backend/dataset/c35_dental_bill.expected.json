@@ -1,0 +1,25 @@
+{
+  "document_type": "bill",
+  "provider_name": "PearlDent Clinic",
+  "patient_name": "Nisha D'Souza",
+  "doctor_name": "Dr. Arjun Nair",
+  "bill_number": "PC-24727",
+  "bill_date": "2026-09-21",
+  "diagnosis": "Chronic periodontitis",
+  "line_items": [
+    {
+      "description": "Consultation Fee",
+      "category": "consultation",
+      "quantity": null,
+      "amount": 1150.0
+    },
+    {
+      "description": "Tooth Extraction",
+      "category": "procedure",
+      "quantity": null,
+      "amount": 800.0
+    }
+  ],
+  "discount": null,
+  "total_amount": 1950.0
+}

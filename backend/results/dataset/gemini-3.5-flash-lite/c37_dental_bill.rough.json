@@ -1,0 +1,43 @@
+{
+  "document_type": "bill",
+  "provider_name": "32 Care Dental Studio",
+  "patient_name": "Ms. Ananya Rao",
+  "doctor_name": "Dr. Kavita Deshmukh",
+  "bill_number": "3CD/2026/80094",
+  "bill_date": "2026-08-06",
+  "diagnosis": null,
+  "line_items": [
+    {
+      "description": "Consultation Fee",
+      "category": "consultation",
+      "quantity": 1.0,
+      "amount": 1150.0
+    },
+    {
+      "description": "Dental Filling (composite)",
+      "category": "procedure",
+      "quantity": 2.0,
+      "amount": 1400.0
+    },
+    {
+      "description": "Root Canal Treatment",
+      "category": "procedure",
+      "quantity": 3.0,
+      "amount": 7500.0
+    },
+    {
+      "description": "IOPA X-Ray",
+      "category": "diagnostic",
+      "quantity": 4.0,
+      "amount": 350.0
+    },
+    {
+      "description": "Dental Veneer (cosmetic)",
+      "category": "cosmetic",
+      "quantity": 5.0,
+      "amount": 8000.0
+    }
+  ],
+  "discount": null,
+  "total_amount": 18300.0
+}

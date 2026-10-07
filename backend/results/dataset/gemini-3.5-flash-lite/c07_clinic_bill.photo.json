@@ -1,0 +1,43 @@
+{
+  "document_type": "bill",
+  "provider_name": "Aarogya Health Point",
+  "patient_name": "Mrs. MEERA PILLAI",
+  "doctor_name": "Dr. S. Venkatesh",
+  "bill_number": "AHP-40615",
+  "bill_date": "2026-09-12",
+  "diagnosis": "Allergic rhinitis",
+  "line_items": [
+    {
+      "description": "Consultation Fee",
+      "category": "consultation",
+      "quantity": null,
+      "amount": 850.0
+    },
+    {
+      "description": "X-Ray Chest PA View",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 450.0
+    },
+    {
+      "description": "Fasting Blood Sugar",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 110.0
+    },
+    {
+      "description": "Complete Blood Count (CBC)",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 310.0
+    },
+    {
+      "description": "Registration Fee",
+      "category": "other",
+      "quantity": null,
+      "amount": 50.0
+    }
+  ],
+  "discount": null,
+  "total_amount": 1770.0
+}

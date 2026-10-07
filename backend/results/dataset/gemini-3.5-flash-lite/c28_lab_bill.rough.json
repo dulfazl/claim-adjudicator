@@ -1,0 +1,37 @@
+{
+  "document_type": "bill",
+  "provider_name": "Medisure Path Lab",
+  "patient_name": "Harpreet Singh",
+  "doctor_name": "Dr. S. Venkatesh",
+  "bill_number": "MPL-14206",
+  "bill_date": "2026-06-23",
+  "diagnosis": null,
+  "line_items": [
+    {
+      "description": "Vitamin D (25-OH)",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 1050.0
+    },
+    {
+      "description": "Fasting Blood Sugar",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 90.0
+    },
+    {
+      "description": "HbA1c",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 460.0
+    },
+    {
+      "description": "Dengue NS1 Antigen Test",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 560.0
+    }
+  ],
+  "discount": 0.0,
+  "total_amount": 2160.0
+}

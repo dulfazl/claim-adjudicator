@@ -1,0 +1,12 @@
+{
+  "document_type": "prescription",
+  "provider_name": "Lakeview Clinic",
+  "patient_name": "Priya Nair",
+  "doctor_name": "Dr. Arjun Nair",
+  "bill_number": null,
+  "bill_date": "2026-08-31",
+  "diagnosis": "Hypertension",
+  "line_items": [],
+  "discount": null,
+  "total_amount": null
+}

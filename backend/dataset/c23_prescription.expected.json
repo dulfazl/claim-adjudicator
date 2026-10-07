@@ -1,0 +1,12 @@
+{
+  "document_type": "prescription",
+  "provider_name": "Sunrise Family Clinic",
+  "patient_name": "Divya Menon",
+  "doctor_name": "Dr. S. Venkatesh",
+  "bill_number": null,
+  "bill_date": "2026-04-09",
+  "diagnosis": "Hypertension",
+  "line_items": [],
+  "discount": null,
+  "total_amount": null
+}
