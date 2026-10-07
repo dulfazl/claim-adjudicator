@@ -13,7 +13,7 @@ from pathlib import Path
 from app.claims import Claim, Decision, Policy
 from app.extract import extract_bill
 from app.quality import is_readable
-from app.rules import decide
+from app.rules import ZERO, decide
 from app.schemas import Bill
 
 ROOT = Path(__file__).parent.parent
@@ -31,7 +31,7 @@ def adjudicate(member: dict, submitted_on: str, images: list[tuple[bytes, str]],
     unclear = [number for number, (data, _) in enumerate(images, start=1) if not is_readable(data)]
     if unclear:
         steps = [f"Document {number} is too blurred to read reliably. Please take a clearer photo." for number in unclear]
-        return Decision(status="RETAKE_PHOTO", claimed=0, approved=0, steps=steps, items=[]), []
+        return Decision(status="RETAKE_PHOTO", claimed=ZERO, approved=ZERO, steps=steps, items=[]), []
 
     with ThreadPoolExecutor() as pool:  # the documents are read at the same time, not one after another
         documents = list(pool.map(lambda image: extract_bill(*image), images))

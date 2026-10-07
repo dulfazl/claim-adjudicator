@@ -38,6 +38,7 @@ def test_every_sample_claim_gets_its_expected_decision(claim_id):
 def test_a_rough_sample_asks_for_a_new_photo():
     result = client.post("/api/samples/claim_001_approved", params={"version": "rough"}).json()
     assert result["decision"]["status"] == "RETAKE_PHOTO"
+    assert result["decision"]["approved"] == "0.00"  # money always has two decimals, even when it is zero
     assert result["documents"] == []
 
 
