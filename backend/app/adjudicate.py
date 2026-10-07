@@ -7,6 +7,7 @@
 
 import json
 import sys
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
 from app.claims import Claim, Decision, Policy
@@ -18,18 +19,28 @@ from app.schemas import Bill
 ROOT = Path(__file__).parent.parent
 SAMPLES = ROOT / "samples"
 POLICY = Policy.model_validate_json((ROOT / "policies" / "standard_opd.json").read_text())
+VERSIONS = {"clean": (".png", "image/png"), "photo": (".photo.jpg", "image/jpeg"), "rough": (".rough.jpg", "image/jpeg")}
 
 
-def adjudicate(member: dict, submitted_on: str, images: list[tuple[bytes, str]], policy: Policy = POLICY) -> Decision:
-    """The whole pipeline for one claim. Each image comes with its type, such as "image/png"."""
+def adjudicate(member: dict, submitted_on: str, images: list[tuple[bytes, str]], policy: Policy = POLICY) -> tuple[Decision, list[Bill]]:
+    """The whole pipeline for one claim. Each image comes with its type, such as "image/png".
+
+    Returns the decision and what the model read from each document.
+    """
     # A blurred photo is turned away before the model sees it, because the model would guess instead of refusing.
     unclear = [number for number, (data, _) in enumerate(images, start=1) if not is_readable(data)]
     if unclear:
         steps = [f"Document {number} is too blurred to read reliably. Please take a clearer photo." for number in unclear]
-        return Decision(status="RETAKE_PHOTO", claimed=0, approved=0, steps=steps, items=[])
+        return Decision(status="RETAKE_PHOTO", claimed=0, approved=0, steps=steps, items=[]), []
 
-    documents = [extract_bill(data, mime_type) for data, mime_type in images]
-    return decide(Claim(member=member, submitted_on=submitted_on, documents=documents), policy)
+    with ThreadPoolExecutor() as pool:  # the documents are read at the same time, not one after another
+        documents = list(pool.map(lambda image: extract_bill(*image), images))
+    return decide(Claim(member=member, submitted_on=submitted_on, documents=documents), policy), documents
+
+
+def sample_images(names: list[str], version: str = "clean") -> list[tuple[bytes, str]]:
+    suffix, mime_type = VERSIONS[version]
+    return [((SAMPLES / f"{name}{suffix}").read_bytes(), mime_type) for name in names]
 
 
 def load_claim(path: Path, offline: bool) -> Claim:
@@ -63,7 +74,6 @@ if __name__ == "__main__":
     if "--offline" in sys.argv:
         decision = decide(load_claim(path, offline=True), POLICY)
     else:
-        suffix, mime_type = (".rough.jpg", "image/jpeg") if "--rough" in sys.argv else (".png", "image/png")
-        images = [((SAMPLES / f"{name}{suffix}").read_bytes(), mime_type) for name in data["documents"]]
-        decision = adjudicate(data["member"], data["submitted_on"], images)
+        images = sample_images(data["documents"], "rough" if "--rough" in sys.argv else "clean")
+        decision, _ = adjudicate(data["member"], data["submitted_on"], images)
     print(report(data["member"]["name"], data["submitted_on"], decision))

@@ -1,5 +1,8 @@
+fastapi
 google-genai
 numpy
 pillow
 pydantic
 python-dotenv
+python-multipart
+uvicorn

@@ -1,6 +1,15 @@
 {
-  "member": { "name": "Fatima Sheikh", "used_this_year": 0 },
+  "title": "Dental treatment with a cosmetic item",
+  "member": {
+    "name": "Fatima Sheikh",
+    "used_this_year": 0
+  },
   "submitted_on": "2026-09-25",
-  "documents": ["005_dental_bill"],
-  "expected": { "status": "PARTIAL", "approved": "5220.00" }
+  "documents": [
+    "005_dental_bill"
+  ],
+  "expected": {
+    "status": "PARTIAL",
+    "approved": "5220.00"
+  }
 }
