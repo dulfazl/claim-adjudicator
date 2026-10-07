@@ -1,0 +1,43 @@
+{
+  "document_type": "bill",
+  "provider_name": "New Life Drug House",
+  "patient_name": "Harpreet Singh",
+  "doctor_name": "Dr. Mohammed Farooq",
+  "bill_number": "NLD-43256",
+  "bill_date": "2026-04-28",
+  "diagnosis": null,
+  "line_items": [
+    {
+      "description": "ALLEGRA 120 TAB 10S",
+      "category": "pharmacy",
+      "quantity": 2.0,
+      "amount": 429.2
+    },
+    {
+      "description": "GLYCOMET 500 SR TAB 20S",
+      "category": "pharmacy",
+      "quantity": 3.0,
+      "amount": 172.5
+    },
+    {
+      "description": "CROCIN ADVANCE TAB 15S",
+      "category": "pharmacy",
+      "quantity": 1.0,
+      "amount": 28.1
+    },
+    {
+      "description": "MONTAIR LC TAB 10S",
+      "category": "pharmacy",
+      "quantity": 1.0,
+      "amount": 198.7
+    },
+    {
+      "description": "LAKME SUNSCREEN SPF50 50ML",
+      "category": "cosmetic",
+      "quantity": 3.0,
+      "amount": 1106.7
+    }
+  ],
+  "discount": null,
+  "total_amount": 1935.2
+}

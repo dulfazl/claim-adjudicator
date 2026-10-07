@@ -1,0 +1,43 @@
+{
+  "document_type": "bill",
+  "provider_name": "CityCare Medical Centre",
+  "patient_name": "Lakshmi Narayanan",
+  "doctor_name": "Dr. S. Venkatesh",
+  "bill_number": "INV167122",
+  "bill_date": "2026-05-09",
+  "diagnosis": "Lower back pain",
+  "line_items": [
+    {
+      "description": "Consultation Fee",
+      "category": "consultation",
+      "quantity": null,
+      "amount": 1100.0
+    },
+    {
+      "description": "Ultrasound Abdomen",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 1600.0
+    },
+    {
+      "description": "Liver Function Test",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 720.0
+    },
+    {
+      "description": "Urine Routine Examination",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 250.0
+    },
+    {
+      "description": "Suturing (minor)",
+      "category": "procedure",
+      "quantity": null,
+      "amount": 1400.0
+    }
+  ],
+  "discount": null,
+  "total_amount": 5070.0
+}

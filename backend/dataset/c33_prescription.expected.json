@@ -1,0 +1,12 @@
+{
+  "document_type": "prescription",
+  "provider_name": "Lakeview Clinic",
+  "patient_name": "Imran Qureshi",
+  "doctor_name": "Dr. Kavita Deshmukh",
+  "bill_number": null,
+  "bill_date": "2026-05-29",
+  "diagnosis": null,
+  "line_items": [],
+  "discount": null,
+  "total_amount": null
+}

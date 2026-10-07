@@ -1,0 +1,25 @@
+{
+  "document_type": "bill",
+  "provider_name": "Medisure Path Lab",
+  "patient_name": "Rohan Mehta",
+  "doctor_name": "Dr. Mohammed Farooq",
+  "bill_number": "MPL-22107",
+  "bill_date": "2026-08-13",
+  "diagnosis": null,
+  "line_items": [
+    {
+      "description": "HbA1c",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 430.0
+    },
+    {
+      "description": "Urine Routine Examination",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 220.0
+    }
+  ],
+  "discount": null,
+  "total_amount": 650.0
+}

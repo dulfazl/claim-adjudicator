@@ -1,0 +1,49 @@
+{
+  "document_type": "bill",
+  "provider_name": "Lakeview Clinic",
+  "patient_name": "Karthik Subramanian",
+  "doctor_name": "Dr. R. Menon",
+  "bill_number": "LC-24914",
+  "bill_date": "2026-08-03",
+  "diagnosis": "Urinary tract infection",
+  "line_items": [
+    {
+      "description": "Follow-up Consultation",
+      "category": "consultation",
+      "quantity": null,
+      "amount": 400.0
+    },
+    {
+      "description": "HbA1c",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 550.0
+    },
+    {
+      "description": "X-Ray Chest PA View",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 490.0
+    },
+    {
+      "description": "Liver Function Test",
+      "category": "diagnostic",
+      "quantity": null,
+      "amount": 630.0
+    },
+    {
+      "description": "Wound Dressing",
+      "category": "procedure",
+      "quantity": null,
+      "amount": 250.0
+    },
+    {
+      "description": "Registration Fee",
+      "category": "other",
+      "quantity": null,
+      "amount": 100.0
+    }
+  ],
+  "discount": null,
+  "total_amount": 2420.0
+}

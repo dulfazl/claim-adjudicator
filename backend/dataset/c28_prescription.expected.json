@@ -1,0 +1,12 @@
+{
+  "document_type": "prescription",
+  "provider_name": "CityCare Medical Centre",
+  "patient_name": "Harpreet Singh",
+  "doctor_name": "Dr. S. Venkatesh",
+  "bill_number": null,
+  "bill_date": "2026-08-25",
+  "diagnosis": null,
+  "line_items": [],
+  "discount": null,
+  "total_amount": null
+}

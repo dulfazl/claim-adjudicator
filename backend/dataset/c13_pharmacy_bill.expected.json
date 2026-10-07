@@ -1,0 +1,49 @@
+{
+  "document_type": "bill",
+  "provider_name": "HealthFirst Pharmacy",
+  "patient_name": "Rohan Mehta",
+  "doctor_name": "Dr. Arjun Nair",
+  "bill_number": "HP-90398",
+  "bill_date": "2026-07-03",
+  "diagnosis": null,
+  "line_items": [
+    {
+      "description": "ELECTRAL PWD 21.8G",
+      "category": "pharmacy",
+      "quantity": 1.0,
+      "amount": 20.1
+    },
+    {
+      "description": "AUGMENTIN 625 DUO TAB 10S",
+      "category": "pharmacy",
+      "quantity": 2.0,
+      "amount": 412.6
+    },
+    {
+      "description": "CROCIN ADVANCE TAB 15S",
+      "category": "pharmacy",
+      "quantity": 2.0,
+      "amount": 58.0
+    },
+    {
+      "description": "ATORVA 10 TAB 15S",
+      "category": "pharmacy",
+      "quantity": 2.0,
+      "amount": 175.4
+    },
+    {
+      "description": "DOLO 650 TAB 15S",
+      "category": "pharmacy",
+      "quantity": 3.0,
+      "amount": 96.0
+    },
+    {
+      "description": "GLYCOMET 500 SR TAB 20S",
+      "category": "pharmacy",
+      "quantity": 1.0,
+      "amount": 63.7
+    }
+  ],
+  "discount": null,
+  "total_amount": 825.8
+}

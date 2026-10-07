@@ -5,3 +5,7 @@ __pycache__/
 node_modules/
 .next/
 .DS_Store
+
+# Generated test-set images: rebuild with scripts.render_samples dataset
+backend/dataset/*.png
+backend/dataset/*.jpg

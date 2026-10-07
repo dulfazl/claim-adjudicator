@@ -1,0 +1,12 @@
+{
+  "document_type": "prescription",
+  "provider_name": "Greenleaf Polyclinic",
+  "patient_name": "Priya Nair",
+  "doctor_name": "Dr. Kavita Deshmukh",
+  "bill_number": null,
+  "bill_date": "2026-08-18",
+  "diagnosis": "Allergic rhinitis",
+  "line_items": [],
+  "discount": null,
+  "total_amount": null
+}

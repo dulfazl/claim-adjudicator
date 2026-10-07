@@ -1,0 +1,12 @@
+{
+  "document_type": "prescription",
+  "provider_name": "CityCare Medical Centre",
+  "patient_name": "Meera Pillai",
+  "doctor_name": "Dr. R. Menon",
+  "bill_number": null,
+  "bill_date": "2026-05-21",
+  "diagnosis": null,
+  "line_items": [],
+  "discount": null,
+  "total_amount": null
+}
