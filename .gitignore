@@ -9,3 +9,6 @@ node_modules/
 # Generated test-set images: rebuild with scripts.render_samples dataset
 backend/dataset/*.png
 backend/dataset/*.jpg
+
+# local tool settings
+.claude/
