@@ -27,6 +27,15 @@ def test_a_missing_number_only_matches_a_missing_number():
     assert not same_number(700.0, 70.0)
 
 
+def test_a_zero_discount_is_the_same_as_no_discount_but_a_zero_total_is_not_a_missing_total():
+    expected = load("001_clinic_bill")  # discount is None
+    got = expected.model_copy(deep=True)
+    got.discount = 0.0
+    assert score(got, expected).wrong_fields == []
+    got.total_amount = None
+    assert score(got, expected).wrong_fields == ["total_amount"]
+
+
 def test_a_perfect_extraction_gets_full_marks():
     expected = load("002_pharmacy_bill")
     result = score(expected, expected)

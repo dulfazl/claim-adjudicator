@@ -8,6 +8,8 @@ Two things are measured for each image version (clean, photo, rough):
   1. Extraction: how many fields and line items the model read correctly.
   2. Decisions: whether the claim decision made from the model's reading matches
      the decision made from the true documents, and if not, in which direction it went wrong.
+     This is shown twice: for the model on its own, and for the whole system, where the
+     sharpness check turns blurred photos away before the model reads them.
 
 The model's answer for every image is saved under results/, so scoring again costs no API calls.
 """
@@ -22,6 +24,7 @@ from pathlib import Path
 from app.adjudicate import POLICY
 from app.claims import Claim, Decision
 from app.extract import MODEL, extract_bill
+from app.quality import is_readable
 from app.rules import decide
 from app.schemas import Bill
 from app.text import normalize
@@ -61,6 +64,8 @@ def score(got: Bill, expected: Bill) -> Score:
         g, e = getattr(got, name), getattr(expected, name)
         if name in TEXT_FIELDS:
             right = normalize(g) == normalize(e)
+        elif name == "discount":  # a printed "Discount 0.00" and no discount line mean the same thing
+            right = same_number(g or 0, e or 0)
         elif name in NUMBER_FIELDS:
             right = same_number(g, e)
         else:
@@ -122,8 +127,9 @@ def read_document(image: Path, saved: Path, fresh: bool) -> Bill | None:
 
 
 def evaluate_version(folder: Path, suffix: str, saved_dir: Path, version: str, expected: dict[str, Bill], cases: list[dict], fresh: bool) -> dict:
-    fields, items, documents, missed, outcomes = Counter(), Counter(), Counter(), Counter(), Counter()
-    mistakes, read = [], {}
+    fields, items, documents, missed, blocked = Counter(), Counter(), Counter(), Counter(), Counter()
+    model_alone, whole_system = Counter(), Counter()
+    mistakes, read, unclear = [], {}, set()
 
     for name, truth in expected.items():
         image = folder / f"{name}{suffix}"
@@ -135,6 +141,10 @@ def evaluate_version(folder: Path, suffix: str, saved_dir: Path, version: str, e
             result = Score(items_total=len(truth.line_items), wrong_fields=list(ALL_FIELDS), mistakes=["not read"])
         else:
             result = score(got, truth)
+
+        if not is_readable(image.read_bytes()):
+            unclear.add(name)
+            blocked["bad readings" if result.mistakes else "good readings"] += 1
 
         fields.update(right=result.fields_right, total=result.fields_total)
         items.update(right=result.items_right, total=result.items_total)
@@ -156,14 +166,18 @@ def evaluate_version(folder: Path, suffix: str, saved_dir: Path, version: str, e
                 mistakes.append(
                     f"claim {case['id']}: {outcome}: got {got.status} ₹{got.approved:,.2f}, should be {truth.status} ₹{truth.approved:,.2f}"
                 )
-        outcomes[outcome] += 1
+        model_alone[outcome] += 1
+        whole_system["retake requested" if unclear.intersection(case["documents"]) else outcome] += 1
 
     return {
         "fields": [fields["right"], fields["total"]],
         "items": [items["right"], items["total"]],
         "documents_all_right": [documents["right"], documents["total"]],
         "missed_by_field": dict(missed.most_common()),
-        "decisions": dict(outcomes.most_common()),
+        "documents_with_mistakes": documents["total"] - documents["right"],
+        "blocked_by_sharpness_check": dict(blocked),
+        "decisions_model_alone": dict(model_alone.most_common()),
+        "decisions_whole_system": dict(whole_system.most_common()),
         "mistakes": mistakes,
     }
 
@@ -188,14 +202,23 @@ def main() -> None:
         results[version] = evaluate_version(folder, suffix, saved_dir, version, expected, cases, fresh="--fresh" in sys.argv)
 
     rows = [
+        ("EXTRACTION", lambda r: ""),
         ("fields right", lambda r: percent(r["fields"])),
         ("line items right", lambda r: percent(r["items"])),
         ("documents fully right", lambda r: percent(r["documents_all_right"])),
     ]
+    rows += [
+        ("", lambda r: ""),
+        ("SHARPNESS CHECK", lambda r: ""),
+        ("bad readings blocked", lambda r: f"{r['blocked_by_sharpness_check'].get('bad readings', 0)} of {r['documents_with_mistakes']}"),
+        ("good readings blocked", lambda r: str(r["blocked_by_sharpness_check"].get("good readings", 0))),
+    ]
     if cases:
         outcomes = ["correct", "sent to review", "underpaid", "overpaid", "missed review"]
-        outcomes += [o for o in ["wrong status", "not read"] if any(o in r["decisions"] for r in results.values())]
-        rows += [(f"claims: {o}", lambda r, o=o: str(r["decisions"].get(o, 0))) for o in outcomes]
+        for title, key in [("CLAIMS, MODEL ALONE", "decisions_model_alone"), ("CLAIMS, WHOLE SYSTEM", "decisions_whole_system")]:
+            shown = outcomes + [o for o in ["retake requested", "wrong status", "not read"] if any(o in r[key] for r in results.values())]
+            rows += [("", lambda r: ""), (title, lambda r: "")]
+            rows += [(o, lambda r, o=o, key=key: str(r[key].get(o, 0))) for o in shown]
 
     print(f"\n{'':24}" + "".join(f"{version:>22}" for version in results))
     for label, cell in rows:

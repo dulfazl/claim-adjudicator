@@ -1,3 +1,5 @@
 google-genai
+numpy
+pillow
 pydantic
 python-dotenv
