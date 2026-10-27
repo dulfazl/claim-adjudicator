@@ -22,7 +22,7 @@ from app.claims import Decision, Policy
 from app.schemas import Bill
 
 MAX_FILES = 4
-MAX_BYTES = 5 * 1024 * 1024
+MAX_BYTES = 4 * 1024 * 1024  # for all files together: the host refuses requests over 4.5 MB
 IMAGE_TYPES = {"image/png", "image/jpeg", "image/webp"}
 SCREEN = ROOT / "static"
 SAMPLE_CLAIMS = {path.stem: json.loads(path.read_text()) for path in sorted((ROOT / "claims").glob("*.json"))}
@@ -86,10 +86,9 @@ def decide_claim(
     for file in files:
         if file.content_type not in IMAGE_TYPES:
             raise HTTPException(400, f"{file.filename}: only PNG, JPEG or WebP images are accepted.")
-        data = file.file.read()
-        if len(data) > MAX_BYTES:
-            raise HTTPException(400, f"{file.filename}: larger than 5 MB.")
-        images.append((data, file.content_type))
+        images.append((file.file.read(), file.content_type))
+    if sum(len(data) for data, _ in images) > MAX_BYTES:
+        raise HTTPException(400, "The documents come to more than 4 MB together. Send smaller photos.")
     return run({"name": member_name, "used_this_year": used_this_year}, submitted_on, images)
 
 

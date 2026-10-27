@@ -35,7 +35,7 @@ export function UploadForm({ busy, onSubmit }: { busy: boolean; onSubmit: (form:
         <input name="used_this_year" type="number" min="0" step="0.01" defaultValue="0" className={field} />
       </label>
       <label className="block text-sm font-medium text-zinc-800">
-        Documents (up to 4 images)
+        Documents (up to 4 images; large photos are shrunk before upload)
         <input
           name="files"
           type="file"
