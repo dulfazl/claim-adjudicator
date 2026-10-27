@@ -84,3 +84,10 @@ def test_sample_images_are_served():
     response = client.get("/api/sample-files/001_clinic_bill.png")
     assert response.status_code == 200
     assert response.headers["content-type"] == "image/png"
+
+
+def test_an_upload_over_the_size_limit_is_refused(monkeypatch):
+    monkeypatch.setattr("app.api.MAX_BYTES", 100_000)  # the sample bill is about 150 KB
+    form = {"member_name": "Ananya Rao", "submitted_on": "2026-09-20"}
+    response = client.post("/api/claims", data=form, files=[upload("001_clinic_bill.png")])
+    assert response.status_code == 400 and "4 MB" in response.json()["detail"]

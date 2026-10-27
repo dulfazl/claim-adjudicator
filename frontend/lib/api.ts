@@ -1,3 +1,5 @@
+import { shrinkImage } from "@/lib/shrink";
+
 // Empty in production, where the backend serves this screen and the API from one address.
 // In development it comes from .env.development.
 export const API_URL = (process.env.NEXT_PUBLIC_API_URL ?? "") + "/api";
@@ -70,4 +72,9 @@ export const getSamples = () => send<SampleClaim[]>("/samples");
 export const decideSample = (id: string, version: ImageVersion) =>
   send<ClaimResult>(`/samples/${id}?version=${version}`, { method: "POST" });
 
-export const decideClaim = (form: FormData) => send<ClaimResult>("/claims", { method: "POST", body: form });
+export async function decideClaim(form: FormData): Promise<ClaimResult> {
+  const files = form.getAll("files") as File[];
+  form.delete("files");
+  for (const file of files) form.append("files", await shrinkImage(file));
+  return send<ClaimResult>("/claims", { method: "POST", body: form });
+}
