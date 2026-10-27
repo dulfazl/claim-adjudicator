@@ -2,7 +2,7 @@
 
 Decides outpatient health insurance claims from photos of medical bills and prescriptions. It answers approved, partly approved, rejected, sent to a person, or "take a clearer photo", and gives a reason for every rupee it cuts.
 
-**Live demo:** moving to a new free host; the link will be back here shortly.
+**Live demo: https://claim-adjudicator.vercel.app**
 
 ![The app deciding a dental claim: root canal capped at the policy limit, teeth whitening not covered](docs/screenshot.png)
 
