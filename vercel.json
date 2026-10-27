@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "cd frontend && npm ci && npm run build && rm -rf ../backend/static && cp -R out ../backend/static",
+  "functions": {
+    "main.py": {
+      "maxDuration": 60,
+      "excludeFiles": "{frontend/**,docs/**,study/**,backend/tests/**,backend/scripts/**,backend/dataset/**,backend/results/**}"
+    }
+  }
+}

@@ -2,7 +2,7 @@
 
 Decides outpatient health insurance claims from photos of medical bills and prescriptions. It answers approved, partly approved, rejected, sent to a person, or "take a clearer photo", and gives a reason for every rupee it cuts.
 
-**Live demo: https://claim-adjudicator.onrender.com** (free hosting that sleeps when idle, so the first load can take up to a minute)
+**Live demo:** moving to a new free host; the link will be back here shortly.
 
 ![The app deciding a dental claim: root canal capped at the policy limit, teeth whitening not covered](docs/screenshot.png)
 
@@ -101,15 +101,21 @@ To rebuild the test set and its images: `python -m scripts.generate_dataset`, `p
 
 ## Deploy
 
-The [`Dockerfile`](Dockerfile) builds one image: the screen is compiled to static files and the Python backend serves both it and the API from a single address. [`render.yaml`](render.yaml) describes it as a free web service on [Render](https://render.com):
+It runs on [Vercel](https://vercel.com)'s free Hobby plan as one project. At build time the Next.js screen is compiled to static files and copied into `backend/static`; the FastAPI app then serves the screen and the API from a single address.
 
-1. In the Render dashboard choose **New > Blueprint** and pick this repository.
-2. Paste your Gemini API key when asked for `GEMINI_API_KEY`. It is stored by Render, not in the repository.
-3. Wait for the first build, then open the address Render gives you.
+- [`main.py`](main.py) is the entry point Vercel looks for. It only makes `backend/app` importable.
+- [`pyproject.toml`](pyproject.toml) lists the pinned packages Vercel installs.
+- [`vercel.json`](vercel.json) holds the build command and keeps tests and the test set out of the deployed function.
 
-A free service sleeps after 15 minutes without visitors, so the first visit after a quiet spell takes up to a minute to load.
+To deploy your own copy:
 
-To run the same image yourself:
+1. In the Vercel dashboard choose **Add New > Project** and import this repository. Leave the root directory as it is.
+2. Under **Environment Variables**, add `GEMINI_API_KEY` with your key. It is stored by Vercel, not in the repository.
+3. Deploy. Every push to `main` deploys again.
+
+Vercel limits a request to 4.5 MB, so the screen shrinks large photos in the browser before uploading them.
+
+The [`Dockerfile`](Dockerfile) builds the same app as one container image, if you would rather run it yourself:
 
 ```bash
 docker build -t claim-adjudicator .
@@ -136,8 +142,10 @@ backend/
   results/          the model's saved answers and the scored summary
   tests/
 frontend/           Next.js screen
-Dockerfile          one image for the screen and the API
-render.yaml         free deployment on Render
+main.py             entry point for Vercel
+pyproject.toml      packages Vercel installs
+vercel.json         Vercel build settings
+Dockerfile          the same app as one container image
 ```
 
 ## Design choices worth knowing
